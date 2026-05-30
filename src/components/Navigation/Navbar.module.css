@@ -1,0 +1,50 @@
+nav {
+  border-bottom: 0.2px solid var(--color-secondary);}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    /* background: beige; */
+}
+
+.logo a{
+    font-family: var(--font-headline);
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    background: var(--gradient-iridescent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -.8px;
+}
+
+.links {
+    display: flex;
+    gap: 3rem;
+}
+
+.link a{
+    font-family: var(--font-headline);
+    color: var(--color-text-heading);
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-medium);
+}
+:global(.active) {
+  color: var(--color-secondary);
+  background: var(--color-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.specialCta {
+    font-family: var(--font-headline);
+    color: var(--color-surface-base);
+    font-size: 1rem;
+    background: var( --gradient-iridescent);
+    padding: .2rem .8rem;
+    border-radius: var( --radius-lg);
+    text-transform: uppercase;
+}
