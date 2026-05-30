@@ -5,6 +5,7 @@ import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import Work from "./pages/Work"
+import StyleGuide from "./styles/StyleGuide"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
      <Route path="*" element={<NotFound/>}/> 
      <Route path="/work" element={<Work/>}/> 
      <Route path="/about" element={<About/>}/> 
+     <Route path="/styleGuide" element={<StyleGuide/>}/> 
      </Route> 
      </Routes>
      </BrowserRouter>
