@@ -1,12 +1,11 @@
-
+import { HeroSection } from "../components/HeroSection/HeroSection";
 
 const Home = () => {
-return (
+  return (
     <>
-         <p>Hello World!</p>
-
+      <HeroSection />
     </>
-)
-}
+  );
+};
 
-export default Home
+export default Home;

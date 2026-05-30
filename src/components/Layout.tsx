@@ -1,18 +1,13 @@
-import { Outlet } from "react-router-dom"
-import { Navbar } from "./Navigation/Navbar"
+import { Outlet } from "react-router-dom";
+import { Navbar } from "./Navigation/Navbar";
 
-interface Props {
-    children? : React.ReactNode
-}
-
-const Layout = ({children}: Props) => {
-return (
+const Layout = () => {
+  return (
     <>
-    <Navbar/>
-    <Outlet/>
-    {children}
+      <Navbar />
+      <Outlet />
     </>
-)
-}
+  );
+};
 
-export default Layout
+export default Layout;

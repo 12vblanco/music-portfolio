@@ -1,13 +1,13 @@
 :root {
   /* Surfaces */
-  --color-surface-base: #1A0E25;
-  --color-surface-card: #22162E;
-  --color-surface-raised: #2A1B38;
+  --color-surface-base: #1a0e25;
+  --color-surface-card: #22162e;
+  --color-surface-raised: #2a1b38;
 
   /* Brand */
-  --color-primary: #BF94FF;
-  --color-secondary: #70F3FF;
-  --color-tertiary: #FF94B4;
+  --color-primary: #bf94ff;
+  --color-secondary: #70f3ff;
+  --color-tertiary: #ff94b4;
 
   /* Borders */
   --color-border: rgba(255, 255, 255, 0.1);
@@ -17,40 +17,44 @@
   --glass-blur: 24px;
 
   /* Gradients */
-  --gradient-iridescent: linear-gradient(135deg, #BF94FF, #70F3FF);
-  --gradient-iridescent-2: linear-gradient(135deg, #70F3FF, #FF94B4);
-  --gradient-iridescent-3: linear-gradient(135deg, #FF94B4, #BF94FF);
-  --gradient-glow: radial-gradient(circle, rgba(191, 148, 255, 0.1), transparent);
+  --gradient-iridescent: linear-gradient(135deg, #bf94ff, #70f3ff);
+  --gradient-iridescent-2: linear-gradient(135deg, #70f3ff, #ff94b4);
+  --gradient-iridescent-3: linear-gradient(135deg, #ff94b4, #bf94ff);
+  --gradient-glow: radial-gradient(
+    circle,
+    rgba(191, 148, 255, 0.1),
+    transparent
+  );
 
   /* Typography */
-  --color-text-heading: #FFFFFF;
+  --color-text-heading: #ffffff;
   --color-text-body: rgba(255, 255, 255, 0.7);
-  --color-text-caption: #70F3FF;
-  
-  --font-headline: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Manrope', sans-serif;
-  --font-label: 'JetBrains Mono', monospace;
+  --color-text-caption: #70f3ff;
+
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "JetBrains Mono", monospace;
 
   /* Font sizes */
---font-size-xs: 0.75rem;
---font-size-sm: 0.875rem;
---font-size-base: 1rem;
---font-size-lg: 1.125rem;
---font-size-xl: 1.25rem;
---font-size-2xl: 1.5rem;
---font-size-3xl: 2rem;
---font-size-4xl: 2.5rem;
---font-size-5xl: 3.5rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
 
-/* Font weights */
---font-weight-regular: 400;
---font-weight-medium: 500;
---font-weight-bold: 700;
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
-/* Line heights */
---line-height-tight: 1.2;
---line-height-normal: 1.5;
---line-height-relaxed: 1.7;
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
 
   /* Spacing scale */
   --space-1: 4px;
@@ -67,4 +71,7 @@
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
+
+  --navbar-height: 106px;
+  --footer-height: 164px;
 }

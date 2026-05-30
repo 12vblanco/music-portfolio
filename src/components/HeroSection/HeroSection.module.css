@@ -1,0 +1,38 @@
+.container {
+  max-width: 1400px;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-4);
+  margin: 0 auto;
+}
+.playlistColumn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: beige;
+}
+.tapeColumn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: blue;
+}
+.infoColumn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: brown;
+}
