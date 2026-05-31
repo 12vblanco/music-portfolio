@@ -4,7 +4,6 @@ import styles from "./TrackThumbnailList.module.css";
 
 interface Props {
   releases: Release[];
-  currentReleaseIndex: number;
   onSelectRelease: (index: number) => void;
   currentTrackIndex: number;
 }
