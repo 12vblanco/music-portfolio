@@ -1,0 +1,36 @@
+.footer {
+  height: var(--footer-height);
+  border-top: 0.2px solid var(--color-secondary);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  height: 100%;
+}
+
+.copyright,
+.credit {
+  font-family: var(--font-label);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-body);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.credit a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.credit a:hover {
+  background: var(--gradient-label);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
