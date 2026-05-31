@@ -43,3 +43,15 @@
   color: var(--color-secondary);
   opacity: 1;
 }
+
+@media (max-width: 1024px) {
+  .item {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    font-size: var(--font-size-lg);
+  }
+}
