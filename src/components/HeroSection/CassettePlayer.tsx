@@ -10,6 +10,10 @@ export const CassettePlayer = ({ currentTrack, isPlaying }: Props) => {
   return (
     <>
       <div className={styles.wrapper}>
+        <div className={`${styles.screw} ${styles.screwTL}`} />
+        <div className={`${styles.screw} ${styles.screwTR}`} />
+        <div className={`${styles.screw} ${styles.screwBL}`} />
+        <div className={`${styles.screw} ${styles.screwBR}`} />
         <div className={styles.inner}>
           <div className={styles.reelArea}>
             <div

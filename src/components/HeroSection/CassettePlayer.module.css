@@ -10,6 +10,61 @@
   position: relative;
 }
 
+.screw {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0d0718;
+  border: 1.5px solid rgba(191, 148, 255, 0.35);
+  z-index: 2;
+}
+
+.screw::before,
+.screw::after {
+  content: "";
+  position: absolute;
+  background: rgba(191, 148, 255, 0.45);
+  border-radius: 1px;
+}
+
+.screw::before {
+  top: 50%;
+  left: 18%;
+  right: 18%;
+  height: 1.5px;
+  transform: translateY(-50%);
+}
+
+.screw::after {
+  left: 50%;
+  top: 18%;
+  bottom: 18%;
+  width: 1.5px;
+  transform: translateX(-50%);
+}
+
+.screwTL {
+  top: 12px;
+  left: 12px;
+  opacity: 0.3;
+}
+.screwTR {
+  top: 12px;
+  right: 12px;
+  opacity: 0.3;
+}
+.screwBL {
+  bottom: 12px;
+  left: 12px;
+  opacity: 0.3;
+}
+.screwBR {
+  bottom: 12px;
+  right: 12px;
+  opacity: 0.3;
+}
+
 .inner {
   background: #1a0e25;
   width: 100%;

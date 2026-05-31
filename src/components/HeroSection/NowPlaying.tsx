@@ -1,5 +1,6 @@
 import { FaPause, FaPlay, FaShareAlt } from "react-icons/fa";
 import { ImNext2, ImPrevious2 } from "react-icons/im";
+import { useState } from "react";
 import type { Release, Track } from "../../types";
 import { formatTime } from "../../utils/FormatTime";
 import styles from "./NowPlaying.module.css";
@@ -31,15 +32,29 @@ export const NowPlaying = ({
   onPlay,
   onSelect,
 }: Props) => {
+  const [copied, setCopied] = useState(false);
+
   const handleShare = async () => {
     if (navigator.share) {
-      await navigator.share({
-        title: currentTrack.title,
-        text: currentTrack.quote,
-        url: window.location.href,
-      });
+      try {
+        await navigator.share({
+          title: currentTrack.title,
+          text: currentTrack.quote,
+          url: window.location.href,
+        });
+      } catch (err: unknown) {
+        if (err instanceof Error && err.name !== "AbortError") {
+          console.warn("Share failed:", err);
+        }
+      }
     } else {
-      navigator.clipboard.writeText(window.location.href);
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.warn("Clipboard write failed:", err);
+      }
     }
   };
   return (
@@ -80,7 +95,7 @@ export const NowPlaying = ({
           <ImNext2 />
         </button>
         <button className={styles.share} onClick={handleShare}>
-          <FaShareAlt />
+          {copied ? "Copied!" : <FaShareAlt />}
         </button>
       </div>
       <div className={styles.albumList}>

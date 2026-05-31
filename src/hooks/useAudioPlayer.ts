@@ -7,10 +7,20 @@ export const useAudioPlayer = (tracks: Track[]) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const shouldAutoPlayRef = useRef(false);
 
   useEffect(() => {
     const newTrack = new Audio(tracks[currentTrackIndex].src);
     audioRef.current = newTrack;
+
+    if (shouldAutoPlayRef.current) {
+      newTrack.play().then(() => {
+        setIsPlaying(true);
+      }).catch((err) => {
+        console.warn("Audio playback blocked:", err);
+      });
+    }
+
     return () => {
       audioRef.current?.pause();
       audioRef.current = null;
@@ -18,21 +28,26 @@ export const useAudioPlayer = (tracks: Track[]) => {
   }, [currentTrackIndex]);
 
   const playTrack = () => {
-    audioRef.current?.play().then(() => {
-      setIsPlaying(true);
-    }).catch((err) => {
-      console.warn("Audio playback blocked:", err);
-    });
+    audioRef.current
+      ?.play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch((err) => {
+        console.warn("Audio playback blocked:", err);
+      });
   };
   const pauseTrack = () => {
     audioRef.current?.pause();
     setIsPlaying(false);
   };
   const nextTrack = () => {
+    shouldAutoPlayRef.current = isPlaying;
     audioRef.current?.pause();
     setCurrentTrackIndex((prev) => (prev + 1 >= tracks.length ? 0 : prev + 1));
   };
   const prevTrack = () => {
+    shouldAutoPlayRef.current = isPlaying;
     audioRef.current?.pause();
     setCurrentTrackIndex((prev) =>
       prev - 1 < 0 ? tracks.length - 1 : prev - 1
@@ -55,14 +70,25 @@ export const useAudioPlayer = (tracks: Track[]) => {
       setDuration(duration);
     };
 
+    const handleEnded = () => {
+      if (currentTrackIndex < tracks.length - 1) {
+        shouldAutoPlayRef.current = true;
+        setCurrentTrackIndex((prev) => prev + 1);
+      } else {
+        setIsPlaying(false);
+      }
+    };
+
     audio.addEventListener("timeupdate", handleTimeUpdate);
     audio.addEventListener("loadedmetadata", handleLoadedMetadata);
+    audio.addEventListener("ended", handleEnded);
 
     return () => {
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      audio.removeEventListener("ended", handleEnded);
     };
-  }, [currentTrackIndex]);
+  }, [currentTrackIndex, tracks.length]);
 
   return {
     currentTrackIndex,
