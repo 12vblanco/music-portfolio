@@ -37,6 +37,8 @@ export const HeroSection = () => {
         />
       </div>
       <div className={styles.tapeColumn}>
+        <div className={styles.blobPurple} />
+        <div className={styles.blobTeal} />
         <CassettePlayer
           currentTrack={currentRelease.tracks[currentTrackIndex]}
           isPlaying={isPlaying}
