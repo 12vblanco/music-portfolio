@@ -2,14 +2,14 @@ import type { Release } from "../types/index";
 
 export const releases: Release[] = [
   {
-    artist: "Artist Name",
+    artist: "Gill Adamson",
     album: "First Album",
     title: "Title Song",
     year: 2025,
-    cover: "cover src",
+    cover: "src/assets/thumb1.png",
     tracks: [
       {
-        artist: "Artist Name",
+        artist: "Gill Adamson",
         album: "First Album",
         title: "Time Is Now",
         duration: 382,
@@ -18,7 +18,7 @@ export const releases: Release[] = [
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },
       {
-        artist: "Artist Name",
+        artist: "Gill Adamson",
         album: "First Album",
         title: "Send Me an Angel",
         duration: 265,
@@ -27,7 +27,7 @@ export const releases: Release[] = [
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },
       {
-        artist: "Artist Name",
+        artist: "Gill Adamson",
         album: "First Album",
         title: "It's a Love Thing",
         duration: 310,
@@ -36,7 +36,7 @@ export const releases: Release[] = [
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },
       {
-        artist: "Artist Name",
+        artist: "Gill Adamson",
         album: "First Album",
         title: "Go Higher Than Love",
         duration: 298,
@@ -48,10 +48,10 @@ export const releases: Release[] = [
   },
   {
     artist: "Gill Adamson",
-    album: "Echoes of Tomorrow",
+    album: "Second album",
     title: "Echoes of Tomorrow",
     year: 2023,
-    cover: "",
+    cover: "src/assets/thumb2.png",
     tracks: [
       {
         artist: "Gill Adamson",
@@ -73,10 +73,10 @@ export const releases: Release[] = [
   },
   {
     artist: "Gill Adamson",
-    album: "Neon Noir",
+    album: "Third album",
     title: "Neon Noir",
     year: 2022,
-    cover: "",
+    cover: "src/assets/thumb3.png",
     tracks: [
       {
         artist: "Gill Adamson",

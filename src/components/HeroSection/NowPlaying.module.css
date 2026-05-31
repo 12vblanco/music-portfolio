@@ -6,7 +6,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: var(--space-4);
-  margin-top: var(--space-8);
+  margin-top: var(--space-6);
 }
 .trackTitle {
   font-family: var(--font-headline);
@@ -15,6 +15,7 @@
   margin-bottom: 1rem;
   max-width: 60%;
   color: var(--color-text-heading);
+  min-height: 103px;
 }
 .timer {
   display: flex;
@@ -50,6 +51,7 @@
   color: var(--color-text-heading);
   letter-spacing: 0.4px;
   font-weight: var(--font-weight-regular);
+  min-height: 47px;
 }
 .controls {
   display: flex;
@@ -139,6 +141,7 @@
   .trackTitle {
     font-size: var(--font-size-2xl);
     max-width: 100%;
+    min-height: fit-content;
   }
   .controls {
     margin-bottom: var(--space-4);

@@ -21,6 +21,7 @@ export const CassettePlayer = ({ currentTrack, isPlaying }: Props) => {
             >
               <div className={styles.reelInner}></div>
             </div>
+            <div className={styles.tapeWindow} />
             <div
               className={`${styles.reel} ${isPlaying ? styles.reelSpinning : ""}`}
             >

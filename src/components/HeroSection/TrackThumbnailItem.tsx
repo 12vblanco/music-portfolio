@@ -23,7 +23,7 @@ export const TrackThumbnailItem = ({
         {release.cover ? (
           <img
             src={release.cover}
-            alt={release.title}
+            alt={release.album}
             className={styles.cover}
           />
         ) : (
@@ -31,7 +31,7 @@ export const TrackThumbnailItem = ({
         )}
       </div>
       <div className={styles.info}>
-        <p className={styles.title}>{release.title}</p>
+        <p className={styles.title}>{release.album}</p>
         <p className={styles.meta}>{release.artist}</p>
       </div>
     </div>
