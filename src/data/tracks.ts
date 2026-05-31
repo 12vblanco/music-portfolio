@@ -13,7 +13,7 @@ export const releases: Release[] = [
         album: "First Album",
         title: "Time Is Now",
         duration: 382,
-        src: "public/audio/Time-Now.mp3",
+        src: "/audio/Time-Now.mp3",
         quote:
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },
@@ -22,7 +22,7 @@ export const releases: Release[] = [
         album: "First Album",
         title: "Send Me an Angel",
         duration: 265,
-        src: "public/audio/Send-Angel.mp3",
+        src: "/audio/Send-Angel.mp3",
         quote:
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },
@@ -31,7 +31,7 @@ export const releases: Release[] = [
         album: "First Album",
         title: "It's a Love Thing",
         duration: 310,
-        src: "public/audio/Love-Thing.mp3",
+        src: "/audio/Love-Thing.mp3",
         quote:
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },
@@ -40,7 +40,7 @@ export const releases: Release[] = [
         album: "First Album",
         title: "Go Higher Than Love",
         duration: 298,
-        src: "public/audio/Go-Higher.mp3",
+        src: "/audio/Go-Higher.mp3",
         quote:
           "An expansive journey through        high-fidelity soundscapes and dreamy vocals.",
       },

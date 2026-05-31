@@ -18,8 +18,11 @@ export const useAudioPlayer = (tracks: Track[]) => {
   }, [currentTrackIndex]);
 
   const playTrack = () => {
-    audioRef.current?.play();
-    setIsPlaying(true);
+    audioRef.current?.play().then(() => {
+      setIsPlaying(true);
+    }).catch((err) => {
+      console.warn("Audio playback blocked:", err);
+    });
   };
   const pauseTrack = () => {
     audioRef.current?.pause();
