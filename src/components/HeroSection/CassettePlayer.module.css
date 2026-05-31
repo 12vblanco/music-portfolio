@@ -1,0 +1,111 @@
+.wrapper {
+  width: 520px;
+  height: 340px;
+  border-radius: 40px;
+  padding: 3rem 3rem 8.8rem;
+  background: var(--gradient-iridescent);
+  box-shadow:
+    0 0 60px rgba(191, 148, 255, 0.4),
+    0 0 120px rgba(112, 243, 255, 0.2);
+  position: relative;
+}
+
+.inner {
+  background: #1a0e25;
+  width: 100%;
+  height: 100%;
+  border-radius: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 42px;
+  overflow: hidden;
+  opacity: 0.95;
+}
+
+.reelArea {
+  background: #110a1c;
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 38px;
+}
+
+.reel {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px dashed rgba(191, 148, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.reelInner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 10px rgba(191, 148, 255, 0.8);
+}
+
+.label {
+  width: 100%;
+  height: 72px;
+  background: var(--gradient-label);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 26px;
+  gap: 4px;
+  margin: 2rem 0;
+  font-family: var(--font-label);
+  text-transform: uppercase;
+}
+
+.tapeTitle {
+  padding-top: 0.6rem;
+  letter-spacing: 2px;
+}
+
+.sideLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--color-text-heading);
+  padding: 0.2rem 0 0.5rem 0;
+  font-size: var(--font-size-xs);
+  opacity: 0.6;
+}
+
+.labelMeta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.labelMeta span {
+  font-family: var(--font-label);
+  font-size: var(--font-size-xs);
+  color: rgba(42, 27, 56, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reelSpinning {
+  animation: spin 7s linear infinite;
+}

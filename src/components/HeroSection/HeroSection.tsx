@@ -1,5 +1,6 @@
 import { releases } from "../../data/tracks";
 import { useAudioPlayer } from "../../hooks/useAudioPlayer";
+import { CassettePlayer } from "./CassettePlayer";
 import styles from "./HeroSection.module.css";
 import { TrackList } from "./TrackList";
 
@@ -22,7 +23,12 @@ export const HeroSection = () => {
           onSelect={selectTrack}
         />
       </div>
-      <div className={styles.tapeColumn}>2</div>
+      <div className={styles.tapeColumn}>
+        <CassettePlayer
+          currentTrack={releases[0].tracks[currentTrackIndex]}
+          isPlaying={isPlaying}
+        />
+      </div>
       <div className={styles.infoColumn}>3</div>
     </div>
   );

@@ -1,30 +1,25 @@
 :root {
+  /* Brand */
+  --color-primary: #d7baff;
+  --color-secondary: #64d9c9;
+  --color-tertiary: #ffb3b2;
+
   /* Surfaces */
   --color-surface-base: #1a0e25;
-  --color-surface-card: #22162e;
-  --color-surface-raised: #2a1b38;
+  --color-surface-card: #3d2f48;
+  --color-surface-raised: #4f248a;
 
-  /* Brand */
-  --color-primary: #bf94ff;
-  --color-secondary: #70f3ff;
-  --color-tertiary: #ff94b4;
-
+  /* Gradients */
+  --gradient-iridescent: linear-gradient(135deg, #d7baff, #64d9c9);
+  --gradient-iridescent-2: linear-gradient(135deg, #64d9c9, #ffb3b2);
+  --gradient-iridescent-3: linear-gradient(135deg, #ffb3b2, #d7baff);
+  --gradient-label: linear-gradient(135deg, #d7baff, #64d9c9, #ffb3b2);
   /* Borders */
   --color-border: rgba(255, 255, 255, 0.1);
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-blur: 24px;
-
-  /* Gradients */
-  --gradient-iridescent: linear-gradient(135deg, #bf94ff, #70f3ff);
-  --gradient-iridescent-2: linear-gradient(135deg, #70f3ff, #ff94b4);
-  --gradient-iridescent-3: linear-gradient(135deg, #ff94b4, #bf94ff);
-  --gradient-glow: radial-gradient(
-    circle,
-    rgba(191, 148, 255, 0.1),
-    transparent
-  );
 
   /* Typography */
   --color-text-heading: #ffffff;

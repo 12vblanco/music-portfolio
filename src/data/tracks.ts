@@ -25,7 +25,7 @@ export const releases: Release[] = [
       {
         artist: "Artist Name",
         album: "Album Name",
-        title: "Its a Love Thing",
+        title: "It's a Love Thing",
         duration: 310,
         src: "src3",
       },
