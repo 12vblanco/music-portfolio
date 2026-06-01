@@ -1,13 +1,12 @@
 .container {
   max-width: 1560px;
   width: 100%;
-  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: var(--space-5);
   padding: var(--space-6) var(--space-4);
-  margin: 0 auto;
 }
 .playlistColumn {
   width: 100%;

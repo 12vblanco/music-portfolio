@@ -1,7 +1,5 @@
 .page {
   min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
-  padding-top: var(--space-5);
-  padding-bottom: var(--space-8);
   position: relative;
   overflow: hidden;
 }
@@ -36,16 +34,54 @@
   pointer-events: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-7);
+/* Page-level glow behind top-right corner of the form card */
+.formGlow {
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  width: 400px;
+  height: 400px;
+  background: rgba(100, 217, 201, 0.09);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Hero */
+/* Two-column grid — matches home page approach */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-7);
+  align-items: center;
+}
+
+.formColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-6);
+  padding-left: var(--space-5);
+}
+
+/* Header */
 .hero {
-  text-align: center;
-  margin-bottom: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .title {
@@ -56,21 +92,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: var(--space-2);
+  line-height: 1.3;
 }
 
 .subtitle {
   font-family: var(--font-body);
   font-size: var(--font-size-lg);
   color: var(--color-tertiary);
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--space-5);
-  align-items: start;
 }
 
 /* Glass card */
@@ -161,16 +189,6 @@
   box-shadow: 0 0 0 2px var(--color-secondary);
 }
 
-.select {
-  color: var(--color-text-body);
-  cursor: pointer;
-}
-
-.select option {
-  background: var(--color-surface-base);
-  color: var(--color-text-heading);
-}
-
 .textarea {
   resize: none;
 }
@@ -203,20 +221,18 @@
   color: #00201c;
 }
 
-/* Sidebar */
-.sidebarCard {
+/* Social section */
+.socialSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 400px;
+  gap: var(--space-3);
 }
 
-.sidebarTitle {
+.sectionLabel {
   font-family: var(--font-headline);
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-secondary);
-  margin-bottom: var(--space-4);
 }
 
 .socialGrid {
@@ -261,7 +277,6 @@
 
 /* Studio status */
 .studioStatus {
-  margin-top: var(--space-5);
   padding: var(--space-3);
   background: rgba(20, 9, 31, 0.5);
   border-radius: var(--radius-sm);
@@ -321,20 +336,14 @@
   font-style: italic;
 }
 
-/* Bottom banner */
-.banner {
-  display: block;
-  margin-top: var(--space-6);
-  width: 100%;
-  height: 280px;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-}
-
 /* Tablet landscape */
 @media (max-width: 1024px) {
   .container {
-    padding: 0 var(--space-6);
+    padding: 0 var(--space-5);
+    gap: var(--space-4);
+  }
+  .infoColumn {
+    padding-left: var(--space-3);
   }
   .title {
     font-size: var(--font-size-4xl);
@@ -344,35 +353,34 @@
   }
 }
 
-/* Tablet portrait */
+/* Tablet portrait — stack columns */
 @media (max-width: 768px) {
-  .grid {
+  .container {
     grid-template-columns: 1fr;
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-5);
+    align-items: start;
+  }
+  .infoColumn {
+    padding-left: 0;
+    order: 1;
+  }
+  .formColumn {
+    order: 2;
   }
   .twoCol {
     grid-template-columns: 1fr;
   }
-  .container {
-    padding: 0 var(--space-4);
-  }
   .title {
     font-size: var(--font-size-3xl);
-  }
-  .sidebarCard {
-    min-height: auto;
-  }
-  .banner {
-    height: 200px;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .page {
-    padding-bottom: var(--space-6);
-  }
-  .hero {
-    margin-bottom: var(--space-5);
+  .container {
+    padding: var(--space-4) var(--space-3);
+    gap: var(--space-4);
   }
   .title {
     font-size: var(--font-size-2xl);
@@ -385,9 +393,5 @@
   }
   .form {
     gap: var(--space-4);
-  }
-  .banner {
-    height: 160px;
-    margin-top: var(--space-5);
   }
 }
