@@ -6,7 +6,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: var(--space-4);
-  margin-top: var(--space-6);
+  margin-top: var(--space-5);
 }
 .trackTitle {
   font-family: var(--font-headline);
