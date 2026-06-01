@@ -1,4 +1,7 @@
 import type { Release } from "../types/index";
+import thumb1 from "../assets/thumb1.png";
+import thumb2 from "../assets/thumb2.png";
+import thumb3 from "../assets/thumb3.png";
 
 export const releases: Release[] = [
   {
@@ -6,7 +9,7 @@ export const releases: Release[] = [
     album: "First Album",
     title: "Title Song",
     year: 2025,
-    cover: "src/assets/thumb1.png",
+    cover: thumb1,
     tracks: [
       {
         artist: "Gill Adamson",
@@ -51,7 +54,7 @@ export const releases: Release[] = [
     album: "Second album",
     title: "Echoes of Tomorrow",
     year: 2023,
-    cover: "src/assets/thumb2.png",
+    cover: thumb2,
     tracks: [
       {
         artist: "Gill Adamson",
@@ -76,7 +79,7 @@ export const releases: Release[] = [
     album: "Third album",
     title: "Neon Noir",
     year: 2022,
-    cover: "src/assets/thumb3.png",
+    cover: thumb3,
     tracks: [
       {
         artist: "Gill Adamson",
